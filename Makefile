@@ -35,5 +35,6 @@ up: ## Launch JupyterLab with token=x
 .PHONY: build-fast
 build-fast: DARGS?=
 build-fast: ## Make the latest build of the image. `stack build --fast` (-O0) so that the build doesn't exceed the 50 minute Travis timeout.
-	$(DOCKER) build --build-arg STACK_ARGS=--fast $(DARGS) --rm --force-rm -t $(IMAGE):$(TAG) .
+##    $(DOCKER) build --build-arg STACK_ARGS=--fast $(DARGS) --rm --force-rm -t $(IMAGE):$(TAG) .
+	DOCKER_BUILDKIT=1 $(DOCKER) build --build-arg STACK_ARGS=--fast $(DARGS) -t $(IMAGE):$(TAG) .
 
