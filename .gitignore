@@ -96,3 +96,4 @@ generated/
 
 # Haskell Stack
 .stack-work
+original/

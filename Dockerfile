@@ -1,4 +1,5 @@
-ARG BASE_CONTAINER=jupyter/base-notebook:lab-3.0.16@sha256:21cd28169e3aee6fcc5613f9056c7efd8c4e6c521d1439b239e28ef5020a3c22
+# ARG BASE_CONTAINER=jupyter/base-notebook:lab-3.0.16@sha256:21cd28169e3aee6fcc5613f9056c7efd8c4e6c521d1439b239e28ef5020a3c22
+ARG BASE_CONTAINER=ghcr.io/iainmon/mathematics-notebook:main
 FROM $BASE_CONTAINER
 # https://hub.docker.com/r/jupyter/base-notebook/tags
 
